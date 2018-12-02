@@ -160,8 +160,8 @@ class GameOfLife:
             elif self.gen == 0:
                 self.prev_states.append(self.new_board.copy())
             else:
-                raise RuntimeError(f'Problem with generations! '
-                                   f'self={self.gen}, gen={gen}')
+                raise RuntimeError('Problem with generations! '
+                                   'self={}, gen={}'.format(self.gen, gen))
         self.mat.set_data(self.new_board)
         unique, counts = numpy.unique(self.new_board, return_counts=True)
         cells = dict(zip(unique, counts))
@@ -174,9 +174,9 @@ class GameOfLife:
         except KeyError:
             self.blue = 0
 
-        self.ax.set_title(f'Gen: {self.gen}      '
-                          f'Red: {self.red}      '
-                          f'Blue: {self.blue}')
+        self.ax.set_title('Gen: {}      '
+                          'Red: {}      '
+                          'Blue: {}'.format(self.gen, self.red, self.blue))
         self.old_board = self.new_board.copy()
 
         return [self.mat]
