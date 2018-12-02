@@ -1,6 +1,9 @@
 # Game of Two Lives
 Immigration (a variation of Conway's Game of Life) arena simulator.
 
+## Launch
+Python of versrion at least `3.6` is required. Run `pip install -r requirements.txt`. Execute `game_of_two_lives.pyw`.
+
 ## Rules
 In this variant of Game of Life the rules are as given:
 * There are three states: Blue, Red and Dead.
